@@ -1,42 +1,39 @@
 #pragma once
 
-#ifdef WL_PLATFORM_WINDOWS
-
 extern Walnut::Application* Walnut::CreateApplication(int argc, char** argv);
 bool g_ApplicationRunning = true;
 
 namespace Walnut {
 
-	int Main(int argc, char** argv)
-	{
-		while (g_ApplicationRunning)
-		{
-			Walnut::Application* app = Walnut::CreateApplication(argc, argv);
-			app->Run();
-			delete app;
-		}
+    int Main(int argc, char** argv)
+    {
+        while (g_ApplicationRunning)
+        {
+            Walnut::Application* app = Walnut::CreateApplication(argc, argv);
+            app->Run();
+            delete app;
+        }
 
-		return 0;
-	}
+        return 0;
+    }
 
-}
+} // namespace Walnut
 
-#ifdef WL_DIST
+#ifdef WL_PLATFORM_WINDOWS
 
 #include <Windows.h>
 
 int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmdshow)
 {
-	return Walnut::Main(__argc, __argv);
+    return Walnut::Main(__argc, __argv);
 }
 
-#else
+#else // Assume Linux or other platforms
 
 int main(int argc, char** argv)
 {
-	return Walnut::Main(argc, argv);
+    return Walnut::Main(argc, argv);
 }
 
-#endif // WL_DIST
+#endif
 
-#endif // WL_PLATFORM_WINDOWS

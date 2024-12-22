@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/Walnut/libWalnut.a CMakeFiles/Walnut.dir/Walnut/src/Walnut/Application.o CMakeFiles/Walnut.dir/Walnut/src/Walnut/ImGui/ImGuiBuild.o CMakeFiles/Walnut.dir/Walnut/src/Walnut/Image.o CMakeFiles/Walnut.dir/Walnut/src/Walnut/Input/Input.o CMakeFiles/Walnut.dir/Walnut/src/Walnut/Random.o
+/usr/bin/ranlib lib/Walnut/libWalnut.a

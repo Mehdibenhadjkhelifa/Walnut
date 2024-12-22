@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWalnutCore.a CMakeFiles/WalnutCore.dir/src/Walnut/Application.cpp.o CMakeFiles/WalnutCore.dir/src/Walnut/Image.cpp.o CMakeFiles/WalnutCore.dir/src/Walnut/Random.cpp.o
+/usr/bin/ranlib libWalnutCore.a
